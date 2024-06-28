@@ -1,0 +1,14 @@
+buttons
+    link it to the calculations
+calculator functionality
+    all the operations, and add support for decimals
+thingy popping up on screen
+
+
+
+
+make number show on screen (remove the input thingy)
+    show strings so you can concatenate it 
+    when you press a numberButton, get the number and output it to the screen, if they press another number, concatenate it to the previous number
+    if they finally press an operator, check which operator it is, they can only press it once, concatenate that operator to the display, then turn that first string into a number
+    once they press a second numberButton, add it to the display, and once they press equal, run it through a function(operator, a, b) and output the value

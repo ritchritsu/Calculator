@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(158, 127, 24);
+}
+
+button{
+    display: inline-block;
+    padding: 10px 35px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #596570; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #353d44; /* Button background color */
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    background-color: #887405;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 10px; /* Adds space between rows */
+    width: 100%; /* Ensure the calculator takes full width */
+    max-width: 400px; /* Restrict max width */
+   
+}
+
+.display{
+    border-radius: 20px;
+    padding: 30px;
+    background-color: rgb(100, 83, 4);
+    margin-bottom: 20px;
+}
+
+.row2, .row3, .row4, .row5{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row6{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
