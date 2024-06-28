@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const DISPLAY = document.getElementById("display");
+  const DISPLAY = document.querySelector(".display");
   const BUTTONS = document.querySelectorAll("button")
-  let a, b, operator;
+  let a = '';
+  let b = '';
+  let operator = '';
+
   
 
   BUTTONS.forEach(button => {
@@ -18,19 +21,48 @@ function handleButtonClick(content){
         handleOperator(content);
     } else if (content === '=') {
         handleEquals();
-    } else if (content === 'C') {
+    } else if (content === 'RESET') {
         handleClear();
     }
+}
+
+function isNumber(content){
+    return !isNaN(content);
 }
 
 function handleNumber(number) {
     // Append number to current input and update display
     // Determine if updating `a` or `b`
+    if(operator === ''){
+        a+=number;
+        DISPLAY.textContent = a;
+    }
+    else{
+        b+=number;
+        DISPLAY.textContent = b;
+    }
 }
 
-function handleOperator(op) {
+function isOperator(operator){
+    if (operator === '+' || operator === '-' || operator === '/' || operator === '*'){
+        return true;
+    } 
+    else{
+        return false;
+    }
+}
+
+function handleOperator(operator) {
     // Store operator and prepare for second number input
     // Update display to show operator if needed
+    if (DISPLAY.textContent === '+' || DISPLAY.textContent === '-' || DISPLAY.textContent === '/' || DISPLAY.textContent === '*'){
+        DISPLAY.textContent = operator;
+    }
+    else{
+        DISPLAY.textContent += operator;
+    }
+    
+    
 }
 
 function handleEquals() {
@@ -40,6 +72,10 @@ function handleEquals() {
 
 function handleClear() {
     // Reset `a`, `b`, operator, and display
+    a = '';
+    b = '';
+    operator = '';
+    DISPLAY.textContent = '';
 }
 
 
