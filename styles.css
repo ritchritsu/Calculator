@@ -37,12 +37,16 @@ button:hover{
    
 }
 
-.display{
-    border-radius: 20px;
-    padding: 30px;
-    background-color: rgb(100, 83, 4);
-    margin-bottom: 20px;
+.display {
+    font-family: Arial, sans-serif; /* Example font family */
+    font-size: 24px; /* Example font size */
+    color: #333333; /* Example text color */
+    background-color: #776307; /* Example background color */
+    padding: 10px; /* Example padding */
+    text-align: right; /* Align text to the right */
+    border: 1px solid #ccc; /* Example border */
 }
+
 
 .row2, .row3, .row4, .row5{
     display: flex;
